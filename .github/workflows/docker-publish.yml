@@ -19,7 +19,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: cwndev/monerod:latest
+  IMAGE_NAME: cwndev/monerod
 
 
 jobs:
