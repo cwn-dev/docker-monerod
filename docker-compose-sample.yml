@@ -1,0 +1,13 @@
+services:
+    monero:
+        image: monero:latest
+        container_name: monero
+        restart: always
+        mem_limit: 512m
+        environment:
+            - TZ=Europe/London
+        ports:
+            - "0.0.0.0:18080:18080"
+            - "0.0.0.0:18081:18081"
+        volumes:
+                - ./monerodata/blockchain-data:/monero/blockchain-data
