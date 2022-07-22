@@ -1,6 +1,6 @@
 services:
     monero:
-        image: monero:latest
+        image: cwndev/monerod:latest
         container_name: monero
         restart: always
         mem_limit: 512m
