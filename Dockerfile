@@ -1,11 +1,11 @@
 FROM debian:stretch-slim
 
-RUN apt update && \
-    apt install -y --no-install-recommends wget bzip2 tar && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends wget bzip2 tar ca-certificates && \
     mkdir -p /monero/blockchain-data && \
     mkdir /monero/cli && \
     wget https://downloads.getmonero.org/cli/linuxarm8 -O /monero/monero.tar.bz2 && \
-    tar -xvf monero.tar.bz2 --strip 1 -C /monero/cli && \
+    tar -xvf /monero/monero.tar.bz2 --strip 1 -C /monero/cli && \
     chmod +x /monero/cli/monerod && \
     rm /monero/monero.tar.bz2
 
